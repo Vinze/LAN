@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('../fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+            url('../fonts/SourceSansPro-SemiBold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('../fonts/SourceSansPro-Italic.woff2') format('woff2'),
+            url('../fonts/SourceSansPro-Italic.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+            url('../fonts/SourceSansPro-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('../fonts/SourceSansPro-Light.woff2') format('woff2'),
+            url('../fonts/SourceSansPro-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    * { -webkit-tap-highlight-color: transparent; }
+
+    [x-cloak] { @apply hidden; }
+
+    th, td { @apply text-left; }
+}
+
+@layer components {
+
+    table.striped {
+        @apply border-collapse table-auto w-full border-gray-200;
+        th, td { @apply px-2; }
+        thead tr {
+            th, td { @apply pb-2 align-bottom; }
+        }
+        tbody tr {
+            th, td { @apply py-2 border-t border-gray-200 transition duration-100; }
+        }
+        tbody tr:nth-child(odd) {
+            th, td { @apply bg-gray-50; }
+        }
+        tbody tr:hover {
+            th, td { @apply bg-yellow-50; }
+        }
+    }
+
+}
+
+@layer utilities {
+    .text-shadow-sm { text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .text-shadow { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33); }
+}
