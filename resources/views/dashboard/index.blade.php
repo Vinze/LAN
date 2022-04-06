@@ -1,12 +1,10 @@
 <x-layout>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe perspiciatis obcaecati assumenda! Et ipsa deleniti ad deserunt omnis quibusdam, recusandae id commodi eveniet porro odit quasi ab alias dolor. Molestias!m
+    <div class="p-4 bg-slate-100">
+        <h1>Documenten</h1>
+        @foreach ($documents as $document)
+            <div>{{ $document->title }}</div>
+        @endforeach
 
-    <x-form-group for="naam" label="Naam">
-        <x-form-input name="naam"/>
-    </x-form-group>
-
-    <x-form-group for="naam" label="Naam">
-        <x-form-textarea name="naam"/>
-    </x-form-group>
-
+        <a href="{{ url('documents/new') }}" class="text-sky-600 hover:text-sky-700">Document toevoegen</a>
+    </div>
 </x-layout>

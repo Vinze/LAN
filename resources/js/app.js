@@ -1,4 +1,5 @@
 import autosize from 'autosize';
+import Alpine from 'alpinejs'
 
 const baseUrl = document.querySelector('meta[name="base-url"]').content;
 const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
@@ -24,3 +25,5 @@ window.postData = async function(url = '', data = {}) {
     });
     return response.json(); // parses JSON response into native JavaScript objects
 }
+
+window.Alpine = Alpine;

@@ -13,20 +13,24 @@
             <div>
                 <a href="#"><img src="{{ asset('images/logo.svg') }}" alt="Logo" width="150" height="49"></a>
             </div>
-            <div class="flex gap-4">
-                <a href="#" class="px-3 py-1 text-white rounded bg-slate-500">Home</a>
-                <a href="#" class="px-3 py-1 text-white rounded bg-slate-500">Wiki</a>
-                <a href="#" class="px-3 py-1 text-white rounded bg-slate-500">Snack</a>
+            <div class="flex">
+                <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Home</a>
+                <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Docs</a>
+                <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Snack</a>
             </div>
         </div>
     </header>
     <main>
         <div class="container max-w-7xl mx-auto px-2 pt-6">
+            <x-flash-messages></x-flash-messages>
             {{ $slot }}
         </div>
     </main>
 
     <script src="{{ mix_url('js/app.js') }}"></script>
     <x-slot:scripts></x-slot>
+    <script>
+        Alpine.start();
+    </script>
 </body>
 </html>

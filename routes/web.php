@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::controller('DashboardController')->group(function() {
     Route::get('/', 'getIndex');
 });
+
+Route::controller('DocumentController')->group(function() {
+    Route::get('documents/view/{document}', 'getView');
+    Route::get('documents/new/{document?}', 'getForm');
+    Route::post('documents/new/{document?}', 'postForm');
+    Route::get('documents/edit/{document}', 'getForm');
+    Route::post('documents/edit/{document}', 'postForm');
+});

@@ -47,7 +47,6 @@
 }
 
 @layer components {
-
     table.striped {
         @apply border-collapse table-auto w-full border-gray-200;
         th, td { @apply px-2; }
@@ -64,6 +63,8 @@
             th, td { @apply bg-yellow-50; }
         }
     }
+
+    .btn { @apply py-3 px-5 bg-slate-600 text-white rounded-md uppercase tracking-wider text-sm hover:bg-slate-700; }
 
 }
 
