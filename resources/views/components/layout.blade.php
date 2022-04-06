@@ -1,8 +1,10 @@
 <!doctype html>
-<html>
+<html lang="nl">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-url" content="{{ url('/') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-slate-200 text-gray-700">
@@ -23,5 +25,8 @@
             {{ $slot }}
         </div>
     </main>
+
+    <script src="{{ mix_url('js/app.js') }}"></script>
+    <x-slot:scripts></x-slot>
 </body>
 </html>
