@@ -26,7 +26,6 @@ class DocumentController extends Controller {
         $document->save();
 
         return redirect('/')->withSuccess('Het document is succesvol opgeslagen.');
-
     }
 
 }

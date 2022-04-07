@@ -1,5 +1,4 @@
 <x-layout :title="$title">
-    <h1 class="mb-6 font-bold text-3xl">{{ $title }}</h1>
     <div class="p-4 bg-slate-100">
         <x-form method="POST">
             <x-form-group for="title" label="Titel" class="mb-4">
