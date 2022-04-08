@@ -64,6 +64,25 @@
         }
     }
 
+    .text-content {
+        h1, h2, h3, p, ul, ol { @apply first:mt-0 last:mb-0; }
+        h1 { @apply mb-3 mt-4 text-3xl font-bold; }
+        h2 { @apply mt-4 mb-2 text-xl font-bold; }
+        h3 { @apply mt-2 mb-1 font-bold; }
+        p, ul, ol, table { @apply mb-2; }
+        ul, ol { @apply ml-5; }
+        ul > li { @apply list-disc; }
+        ol > li { @apply list-decimal; }
+        a { @apply text-blue-500 hover:text-orange-600; }
+        img { @apply max-w-full; }
+        hr { @apply my-6; }
+        table {
+            @apply w-full table-fixed;
+            th { @apply font-bold bg-gray-100; }
+            th, td { @apply p-2 pr-4 border border-gray-200; }
+        }
+    }
+
     .btn { @apply py-3 px-5 bg-slate-600 text-white rounded-md uppercase tracking-wider text-sm hover:bg-slate-700; }
 
     .link { @apply text-slate-100 hover:text-slate-200; }

@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-slate-700 text-gray-700">
+<body class="bg-slate-700 text-gray-100">
     <header class="bg-slate-600 shadow">
         <div class="flex container max-w-7xl mx-auto py-4 px-2 justify-between items-center">
             <div>

@@ -1,1 +1,1 @@
-<input type="{{ $type }}" name="{{ $name }}" value="{{ $value }}" {{ $attributes->merge(['class' => 'p-2 align-middle bg-gray-50 rounded border border-gray-300 focus:border-blue-300 focus:ring-blue-200 placeholder:text-gray-400', 'id' => Str::slug($name)]) }}>
+<input type="{{ $type }}" name="{{ $name }}" value="{{ $value }}" {{ $attributes->merge(['class' => 'p-2 align-middle bg-slate-600 rounded focus:border-blue-300 focus:ring-blue-200 placeholder:text-gray-400', 'id' => Str::slug($name)]) }}>
