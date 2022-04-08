@@ -83,7 +83,7 @@
         }
     }
 
-    .btn { @apply py-3 px-5 bg-slate-600 text-white rounded-md uppercase tracking-wider text-sm hover:bg-slate-700; }
+    .btn { @apply inline-block py-3 px-5 bg-emerald-700 text-white rounded-md uppercase tracking-wider text-sm hover:bg-emerald-800; }
 
     .link { @apply text-slate-100 hover:text-slate-200; }
 

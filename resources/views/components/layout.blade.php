@@ -23,7 +23,7 @@
         </div>
     </header>
     <main>
-        <div class="container max-w-7xl mx-auto px-2 pt-6">
+        <div class="container max-w-7xl mx-auto px-2 pt-6 pb-12">
             @if (isset($title))
                 <h1 class="mb-4 font-bold text-4xl">{{ $title }}</h1>
             @endif

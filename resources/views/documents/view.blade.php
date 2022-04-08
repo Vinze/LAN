@@ -4,5 +4,5 @@
             {!! format_markdown($document->content) !!}
         </div>
     </div>
-    <a href="{{ url('documents/edit/'.$document->id) }}" class="link">Document bewerken</a>
+    <a href="{{ url('documents/edit/'.$document->id) }}" class="btn">Document bewerken</a>
 </x-layout>

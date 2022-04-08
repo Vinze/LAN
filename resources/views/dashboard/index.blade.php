@@ -11,5 +11,5 @@
             </a>
         @endforeach
     </div>
-    <a href="{{ url('documents/new') }}" class="link">Document toevoegen</a>
+    <a href="{{ url('documents/new') }}" class="btn">Document toevoegen</a>
 </x-layout>
