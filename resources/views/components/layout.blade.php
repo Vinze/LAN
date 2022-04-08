@@ -8,8 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-slate-200 text-gray-700">
-    <header class="bg-slate-600">
+<body class="bg-slate-700 text-gray-700">
+    <header class="bg-slate-600 shadow">
         <div class="flex container max-w-7xl mx-auto py-4 px-2 justify-between items-center">
             <div>
                 <a href="{{ url('/') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo" width="300" height="98"></a>
@@ -18,8 +18,6 @@
                 @if (Auth::check())
                     <a href="{{ url('/') }}" class="px-3 py-1 text-lg text-white rounded hover:bg-slate-500">Home</a>
                     <a href="{{ url('logout') }}" class="px-3 py-1 text-lg text-white rounded hover:bg-slate-500">Logout</a>
-                @else
-                    <a href="{{ url('login') }}" class="px-3 py-1 text-lg text-white rounded hover:bg-slate-500">Inloggen</a>
                 @endif
             </div>
         </div>
