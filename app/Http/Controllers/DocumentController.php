@@ -6,8 +6,10 @@ use App\Models\Document;
 
 class DocumentController extends Controller {
 
-    public function getView(Request $request) {
-        return view('documents.view');
+    public function getView(Request $request, Document $document) {
+        $title = $document->title;
+
+        return view('documents.view', compact('title', 'document'));
     }
 
     public function getForm(Request $request, Document $document) {

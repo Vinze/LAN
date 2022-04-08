@@ -9,23 +9,25 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-slate-200 text-gray-700">
-    <header class="h-16 shadow-lg bg-slate-600">
-        <div class="flex container max-w-7xl mx-auto p-2 justify-between items-center">
+    <header class="bg-slate-600">
+        <div class="flex container max-w-7xl mx-auto py-4 px-2 justify-between items-center">
             <div>
-                <a href="{{ url('/') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo" width="150" height="49"></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo" width="300" height="98"></a>
             </div>
             <div class="flex">
-                <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Home</a>
-                <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Docs</a>
-                <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Snack</a>
-                <a href="{{ url('logout') }}" class="px-3 py-1 text-white rounded hover:bg-slate-500">Logout</a>
+                @if (Auth::check())
+                    <a href="{{ url('/') }}" class="px-3 py-1 text-lg text-white rounded hover:bg-slate-500">Home</a>
+                    <a href="{{ url('logout') }}" class="px-3 py-1 text-lg text-white rounded hover:bg-slate-500">Logout</a>
+                @else
+                    <a href="{{ url('login') }}" class="px-3 py-1 text-lg text-white rounded hover:bg-slate-500">Inloggen</a>
+                @endif
             </div>
         </div>
     </header>
     <main>
         <div class="container max-w-7xl mx-auto px-2 pt-6">
             @if (isset($title))
-                <h1 class="mb-6 font-bold text-3xl">{{ $title }}</h1>
+                <h1 class="mb-4 font-bold text-4xl">{{ $title }}</h1>
             @endif
             <x-flash-messages></x-flash-messages>
             {{ $slot }}

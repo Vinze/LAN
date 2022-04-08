@@ -7,9 +7,11 @@ use App\Models\Document;
 class DashboardController extends Controller {
 
     public function getIndex(Request $request) {
+        $title = 'LAN feestje';
+
         $documents = Document::get();
 
-        return view('dashboard.index', compact('documents'));
+        return view('dashboard.index', compact('title',  'documents'));
     }
 
 }

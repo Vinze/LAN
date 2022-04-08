@@ -1,5 +1,3 @@
 <x-layout>
-    <div class="p-4 bg-slate-100">
-        <a href="{{ url('oauth/discord') }}">Inloggen met Discord</a>
-    </div>
+    <a href="{{ url('oauth/discord') }}" class="inline-block p-4 bg-slate-600">Inloggen met Discord</a>
 </x-layout>

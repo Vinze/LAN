@@ -8,7 +8,12 @@
                 <x-form-textarea name="content" :value="$document->content" class="w-full" rows="10"/>
             </x-form-group>
             <div class="mt-2">
-                <x-form-submit>Opslaan</x-form-submit>
+                <x-form-submit class="mr-2">Opslaan</x-form-submit>
+                @if ($document->exists)
+                    <a href="{{ url('documents/view/'.$document->id) }}" class="link">Annuleren</a>
+                @else
+                    <a href="{{ url('documents') }}" class="link">Annuleren</a>
+                @endif
             </div>
         </x-form>
     </div>
