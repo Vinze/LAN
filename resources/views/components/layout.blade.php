@@ -18,6 +18,7 @@
                 <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Home</a>
                 <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Docs</a>
                 <a href="#" class="px-3 py-1 text-white rounded hover:bg-slate-500">Snack</a>
+                <a href="{{ url('logout') }}" class="px-3 py-1 text-white rounded hover:bg-slate-500">Logout</a>
             </div>
         </div>
     </header>

@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest')->group(function() {
     Route::controller('AuthController')->group(function() {
         Route::get('login', 'getLogin')->name('login');
-        // Route::get('oauth/{service}', 'getOauth');
-        // Route::get('oauth/{service}/callback', 'getOauthCallback');
+        Route::get('oauth/{service}', 'getOauth');
+        Route::get('oauth/{service}/callback', 'getOauthCallback');
     });
 });
 
