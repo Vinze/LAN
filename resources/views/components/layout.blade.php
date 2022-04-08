@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="base-url" content="{{ url('/') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix_url('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-slate-700 text-gray-100">
     <header class="bg-slate-600 shadow">
