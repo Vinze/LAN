@@ -1,7 +1,7 @@
 <x-layout :title="$title">
     <x-form method="POST">
         <div class="mb-4">
-            <x-form-input name="title" :value="$document->title" placeholder="Titel" class="w-full"/>
+            <x-form-input name="title" :value="$document->title" placeholder="Titel" class="font-bold text-2xl w-full"/>
         </div>
         <div class="mb-4">
             <x-form-textarea name="content" :value="$document->content" placeholder="Inhoud" class="w-full" rows="10"/>

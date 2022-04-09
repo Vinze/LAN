@@ -4,8 +4,11 @@ namespace App\Models;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Document extends Model {
+class Document extends Model implements Auditable {
+
+    use \OwenIt\Auditing\Auditable;
 
     protected $fillable = [
         'title',
