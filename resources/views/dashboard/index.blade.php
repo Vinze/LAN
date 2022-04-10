@@ -1,4 +1,5 @@
 <x-layout :title="$title">
+    <h1 class="mb-4 font-bold text-4xl">Documenten</h1>
     <div class="grid grid-cols-5 gap-4 mb-4">
         @foreach ($documents as $document)
             <a href="{{ url('documents/view/'.$document->id) }}" class="block p-4 bg-slate-600 text-center shadow hover:shadow-lg">

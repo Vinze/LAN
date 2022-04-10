@@ -7,6 +7,7 @@
     <meta name="base-url" content="{{ url('/') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ mix_url('css/app.css') }}" rel="stylesheet">
+    <x-slot:head></x-slot>
 </head>
 <body class="bg-slate-700 text-gray-100">
     <header class="bg-slate-600 shadow">
@@ -24,9 +25,6 @@
     </header>
     <main>
         <div class="container max-w-7xl mx-auto px-2 pt-6 pb-12">
-            @if (isset($title))
-                <h1 class="mb-4 font-bold text-4xl">{{ $title }}</h1>
-            @endif
             <x-flash-messages></x-flash-messages>
             {{ $slot }}
         </div>
